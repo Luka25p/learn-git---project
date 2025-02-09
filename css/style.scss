@@ -2,15 +2,21 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.container a{
+    text-decoration: none;
+    display: flex;
+    background-color: rgb(250, 57, 74);
+    padding: 5px 20px;
+    border-radius: 5px;
+}
 .cards{
     img{
         width: 100%;
         height: 200px;
         object-fit: cover;
-        padding: 10px;
+        padding: 10px;        
     }
-    div{
+    .thumbNail{
         padding: 0px;
         background-color: white;
         border-radius: 0;
@@ -19,6 +25,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: relative;
         section{
             .text{
                 overflow:hidden;
@@ -28,19 +35,38 @@
             }
         }
         time{
-            padding: 5px 30px;
-            font-size: 14px;
-            color: rgb(39, 39, 39);
+            margin: 5px 30px;
+            padding: 5px 0px;
+            font-size: 12px;
+            color: rgb(110, 110, 110);
+            letter-spacing: 1px;
+            font-weight: 600;
             margin-top: 20px;
             display: inline-block;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.247);
         }
         h3{
             padding: 5px 30px;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 30px;
-            word-break: break-all;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            height: 0%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.13);
+            transition: .3s linear;
+        }
+        &:hover::after{
+            height: 50%;
         }
     }
+    
 }
 .out{
     background-color: rgb(209, 209, 209);
@@ -80,4 +106,8 @@
 }
 .container{
     width: 60%;
+}
+.fa-play{
+    color: rgb(250, 57, 74);
+    padding-right: 10px;
 }
