@@ -2,36 +2,82 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-.carousel-costum{
-    height: 60vh;
-    img{
-        height: 60vh;
-        object-fit: cover;
-    }
-}
+
 .cards{
-    
     img{
         width: 100%;
-        height: 150px;
+        height: 200px;
         object-fit: cover;
         padding: 10px;
     }
     div{
         padding: 0px;
-        background-color: rgb(61, 61, 61);
+        background-color: white;
         border-radius: 0;
+        height: 350px;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        section{
+            .text{
+                overflow:hidden;
+                height: 80px;
+                padding-bottom: 20px;
+                display: inline-block;
+            }
+        }
         time{
-            padding: 10px;
+            padding: 5px 30px;
             font-size: 14px;
-            color: rgb(218, 218, 218);
+            color: rgb(39, 39, 39);
+            margin-top: 20px;
+            display: inline-block;
         }
         h3{
-            padding: 10px;
-            font-size: 20px
+            padding: 5px 30px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            word-break: break-all;
         }
     }
 }
+.out{
+    background-color: rgb(209, 209, 209);
+}
 .btn2{
     @extend %myButton;
+}
+.page2{
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    .card-items{
+        position: relative;
+        cursor: pointer;
+        width: 330px;
+        h4{
+            font-size: 20px;
+            padding: 20px;
+            word-break: break-all;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 0%;
+            background-color: rgba(0, 0, 0, 0.105);
+            top: 0;
+            transition: .3s linear;
+        }
+        &:hover::after{
+            height: 100%;
+        }
+    }
+    
+}
+.container{
+    width: 60%;
 }
