@@ -1,0 +1,15 @@
+$myColor : orange;
+
+%myButton {
+    padding: 10px 0px;
+    width: 100%;
+    color: rgb(239, 239, 239);
+    background-color: rgb(41, 41, 41);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    &:hover{
+        opacity: .7;
+    }
+}
